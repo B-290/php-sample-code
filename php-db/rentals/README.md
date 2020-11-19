@@ -45,7 +45,7 @@
 
         var_dump($vehicles);
         ```
-    3. Loop through `$vehicles
+    3. Loop through `$vehicles`
 
 ## Attributions
 [hurshd0/aviano-db](https://github.com/hurshd0/aviano-db)
