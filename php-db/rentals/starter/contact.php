@@ -1,24 +1,18 @@
+<?php
+include('includes/config.php');
+
+?>
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Sample Website</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/main.css" rel="stylesheet">
+  <?php include("includes/partials/head.php"); ?>
+
 </head>
 
 <body>
 	<div id="wrapper">
-    	<header>
-			<h1>Sample Website</h1>
-            <nav>
-            	<ul>
-                	<li><a href="index.php">Home</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+  <?php include("includes/partials/header.php"); ?>
+
         <main>
         	<h1>Contact Us</h1>
         	<form action="#" method="post">
@@ -62,9 +56,8 @@
 </form>
 
         </main>
-        <footer>
-        	<p>&copy; Copyright 2016 Dan Stephenson. All Rights Reserved.</p>
-        </footer>
+        <?php include("includes/partials/footer.php"); ?>
+
     </div>
 </body>
 </html>
