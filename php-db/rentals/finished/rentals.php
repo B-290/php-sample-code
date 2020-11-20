@@ -34,6 +34,16 @@ $vehicle = mysqli_fetch_row($result);
 
 var_dump($vehicle);
 
+// *******************
+// Cleanup
+//********************
+
+// free the $result from memory (good practise)
+mysqli_free_result($result);
+
+// close connection
+mysqli_close($conn);
+
 ?>
 <!doctype html>
 <html>
