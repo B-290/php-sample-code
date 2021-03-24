@@ -1,72 +1,42 @@
-# PHP - Getting Started
-## Differences between PHP and Javascript
-### Implementation
-- XAMPP needs to be running in order for our PHP pages to execute. The web directory will be fixed, as opposed to Node where we can boot up a server where ever we want.
-- PHP is a view compiling language very similar to EJS. Imagine a PHP file as an upgraded HTML file. The PHP run-time will ignore HTML and will only execute code between the `<?php` and `?>` tags. By default it will respond with the HTML and whatever the PHP resolved to (usually HTML).
-- Although PHP pages will often represent an HTML page (including a `DOCTYPE` and elements such as `head`, `body`, etc), it doesn't have to. Some pages will only hold PHP code (still between `<?php` and `?>` tags) that do not output any HTML.
-- Unlike Javascript, PHP files can be easily included in other PHP files using one of the following functions:
-    - `include()`
-    - `require()`
-    - `include_once()`
-    - `require_once()`
-- There are no asynchronous events in PHP.
-- Functions are not first-class, meaning there are no callback functions in PHP.
+# PHP and MySQL
+## Related Pages
+- [PHP Primer](php)
+- [MySQL Primer](mysql)
 
-### Syntax (primary differences)
-- Variables: There are no declaration keywords. Instead, variables are created and returned with the `$` symbol:
+## XAMPP Start-up
+### Prerequisites
+1. [XAMPP installed](https://www.apachefriends.org/index.html)
 
-    ```php
-    $day = 'Monday';
-    ```
-- An `Array` in Javascript is an "indexed array" in PHP.
+### Start LAMP environment
+1. Start XAMPP. The application will boot up and show a different control panel on Mac vs PC.
+    - **Mac OS**
+        1. Under **General**: Click `Start`, then
+        2. Under **Services**: If `ProFTPD`, `Apache` and `MySQL` are not all green, click `Start All`, then
+        3. Under **Network**: Click `Enable` (this sets up the ports), then
+        4. Under **Volumes**: Click `Mount`.
+        5. Under General: Click `Go to Application`. Your browser will then load a web page where you can:
+        6. Click `phpMyAdmin` to manage your MySQL database, if needed.
+    - **PC** 
+        1. Click `Start` for `Apache` and `MySQL`, then
+        2. Click `Admin` for `Apache`. Your browser will then load a web page where you can:
+        3. Click `phpMyAdmin` to manage your MySQL database, if needed.
+2. In the terminal, navigate to the XAMPP web directory, `htdocs`:
+    - PC
 
-    ```php
-    $people = array('Kevin', 'Jeremy', 'Sara');
-    $ids = array(23, 55, 12);
-    $cars = ['Honda', 'Toyota', 'Ford'];
-    $cars[3] = 'Chevy';
-    $cars[] = 'BMW';
-    ```
+        ```
+        $ cd /c/xampp/htdocs
+        ```
 
-- An `Object` in Javascript is an "associative array" in PHP. PHP's version of Objects are called Classes, which we won't cover in this course.
+    - Mac OS
 
-    ```php
-    $people = [
-      22 => 'Brad',
-      44 => 'Jose', 
-      63 => 'William'
-    ];
-    $people[42] = 'Jill';
-    ```
-- Outputting content: instead of `console.log()`, PHP uses the `echo()` function (parentheses are optional) to output strings and numbers.
+        ```
+        $ cd ~/.bitnami/stackman/machines/xampp/volumes/root/htdocs
+        ```
 
-    ```php
-    echo $people['Brad'];
-    echo $ids[22];
-    echo $people['Jill'];
-    ```
-- To log a complex data type such as an array, use the `var_dump()` function:
+        If that doesn't work, try this:
 
-    ```php
-    var_dump($people);
-    ```
+        ```shell
+        $ cd /opt/lampp/htdocs
+        ```
 
-## Example PHP Directory Structure
-
-```
-- assets
---- css
---- js
---- images
-- includes
---- _config.php
---- _functions.php
---- head.php
---- header.php
---- nav.php
---- footer.php
-- index.php
-- about.php
-- products.php
-- contact.php
-```
+3. Open this directory in VS Code.
