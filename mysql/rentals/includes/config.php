@@ -1,7 +1,7 @@
 <?php
 
 // Database connection
-$conn = mysqli_connect('localhost', 'rentals', '09qe6O08bWkuU6iE', 'aviano-db');
+$conn = mysqli_connect('localhost', 'root', '', 'aviano-db');
 
 // check connection
 if(!$conn){

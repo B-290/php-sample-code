@@ -41,9 +41,7 @@ mysqli_close($conn);
 			<h1>Sample SQL Output</h1>
     </header>
     <main>
-      <pre>
-        <?php var_dump($vehicles); ?>
-      </pre>
+      <pre><?php var_dump($vehicles); ?></pre>
     </main>
   </div>
 </body>
