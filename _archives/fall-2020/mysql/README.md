@@ -1,7 +1,6 @@
 # Relational Data Models
+- [phpMyAdmin Activity](phpmyadmin.md)
 - [SQL Syntax Cheat Sheet](sql-syntax.md)
-- [Activity: Build a database in phpMyAdmin](phpmyadmin.md)
-- [Activity: Import `aviano-db`](rentals)
 
 ## Terminology
 <dl>

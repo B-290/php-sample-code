@@ -1,9 +1,4 @@
 # SQL Syntax
-## Related Pages
-- SQL Syntax Cheat Sheet
-- [Activity: Build a database in phpMyAdmin](phpmyadmin.md)
-- [Activity: Import `aviano-db`](rentals)
-
 ## Create: `INSERT INTO`
 1. Insert data into all columns of a table:
 
