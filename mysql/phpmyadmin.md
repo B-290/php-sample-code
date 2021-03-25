@@ -1,5 +1,6 @@
 # phpMyAdmin Demo
 ## Related Pages
+- [Terminology](./)
 - [SQL Syntax Cheat Sheet](sql-syntax.md)
 - Activity: Build a database in phpMyAdmin
 - [Activity: Import `aviano-db`](rentals)
