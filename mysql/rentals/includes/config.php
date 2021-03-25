@@ -9,6 +9,7 @@ if(!$conn){
 }
 
 // Site-wide config
-$site_title = "Safety Pony Inc."
+$site_title = "Beach Spear" . " " ."Inc.";
+$indexed_array = ['one', 'two' => 'two', 'three'];
 
 ?>

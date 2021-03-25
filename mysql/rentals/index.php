@@ -30,7 +30,7 @@ mysqli_close($conn);
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Sample SQL Output</title>
+    <title><?php echo $site_title; ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/main.css" rel="stylesheet">
 </head>
@@ -38,7 +38,7 @@ mysqli_close($conn);
 <body>
 	<div id="wrapper">
     <header>
-			<h1>Sample SQL Output</h1>
+			<h1><?php echo $site_title; ?></h1>
     </header>
     <main>
       <pre><?php var_dump($vehicles); ?></pre>
