@@ -1,10 +1,12 @@
 # SQL Syntax
 ## Related Pages
+- [Terminology](README.md)
 - SQL Syntax Cheat Sheet
 - [Activity: Build a database in phpMyAdmin](phpmyadmin.md)
 - [Activity: Import `aviano-db`](rentals)
 
-## Create: `INSERT INTO`
+## CRUD Operations
+### Create: `INSERT INTO`
 1. Insert data into all columns of a table:
 
     ```sql
@@ -23,7 +25,7 @@
       (value1, value2, value3, ...);  
     ```
 
-## Read: `SELECT`
+### Read: `SELECT`
 1. Select specific columns from all rows from a table:
 
     ```sql
@@ -57,7 +59,7 @@
       column1, column2 ASC|DESC
     ```
 
-## Update: `UPDATE`
+### Update: `UPDATE`
 
 ```sql
 UPDATE 
@@ -68,7 +70,7 @@ WHERE
   condition; 
 ```
 
-## Delete: `DELETE`
+### Delete: `DELETE`
 
 ```sql
 DELETE FROM 
@@ -76,3 +78,5 @@ DELETE FROM
 WHERE 
   condition; 
 ```
+
+## Joins
