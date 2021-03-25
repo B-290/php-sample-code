@@ -1,11 +1,12 @@
 # phpMyAdmin Demo
 ## Related Pages
+- [Terminology](./)
 - [SQL Syntax Cheat Sheet](sql-syntax.md)
 - Activity: Build a database in phpMyAdmin
 - [Activity: Import `aviano-db`](rentals)
 
 ## Sample Data
-- [Animals](https://github.com/sait-wbdv/sample-data/blob/main/js/animals.js)
+- [Animals](https://github.com/sait-wbdv/sample-code/blob/master/assets/js/animal-objects.mjs)
 
 ## Instructions
 1. Create a database:

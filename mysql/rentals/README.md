@@ -1,5 +1,6 @@
 # Vehicle Rental Website
 ## Related Pages
+- [Terminology](../)
 - [SQL Syntax Cheat Sheet](../sql-syntax.md)
 - [Activity: Build a database in phpMyAdmin](../phpmyadmin.md)
 - Activity: Import `aviano-db`
