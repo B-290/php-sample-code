@@ -35,6 +35,13 @@
       table_name; 
     ```
 
+    - Examples: 
+        - Find the First Name and Last name for every customer:
+
+            ```sql
+            SELECT first_name, last_name FROM customer
+            ```
+        
 2. Select from specific rows with WHERE
 
     ```sql
@@ -45,6 +52,12 @@
     WHERE
       condition;
     ```
+
+    - Example: Find all fields for anyone with a last name of 'Packe':
+
+        ```sql
+        SELECT * FROM customer WHERE last_name = 'Packe'
+        ```
 
 3. Order the rows returned with ORDER BY
 
@@ -59,6 +72,12 @@
       column1, column2 ASC|DESC
     ```
 
+    - Example: Find all customers and order them by last name, starting at Z:
+
+        ```sql
+        SELECT id, first_name, last_name FROM customer ORDER BY last_name DESC
+        ```
+
 ### Update: `UPDATE`
 
 ```sql
@@ -69,6 +88,12 @@ SET
 WHERE 
   condition; 
 ```
+    - Example: Update the last name of customer `4` to "Marcias":
+
+        ```sql
+        UPDATE customer SET last_name = 'Marcias' WHERE id = '4' 
+        ```
+
 
 ### Delete: `DELETE`
 
@@ -78,6 +103,12 @@ DELETE FROM
 WHERE 
   condition; 
 ```
+
+    - Example: Delete all records that total more than 1000 (then get fired):
+
+        ```sql
+        DELETE FROM rental_invoice WHERE total_amount_payable > 1000; 
+        ```
 
 ## Joins
 ### `INNER JOIN`: Return records that match between multiple tables
@@ -95,20 +126,22 @@ WHERE
   condition; 
 ```
 
-Example:
+    - The `WHERE` condition is optional.
+    - The `AS` keyword is optional and is used to abbreviate long table names.
+    - `t1.field` is only needed if the field name exists in both tables. Otherwise, `t1.` can be ommitted.
+    - There are other types of joins but `INNER JOIN` is most common.
+    - Example: Find the start date, first/last name and customer id of all rentals made after July 1st, 2018.
 
-```sql
-SELECT 
-  c.id, first_name, last_name 
-FROM 
-  customer as c 
-INNER JOIN 
-  rental as r 
-ON 
-  c.id = r.customer_id 
-```
+        ```sql
+        SELECT 
+          c.id, first_name, last_name, start_date
+        FROM 
+          customer as c 
+        INNER JOIN 
+          rental as r 
+        ON 
+          c.id = customer_id  
+        WHERE 
+          start_date > 20180701
+        ```
 
-- The `WHERE` condition is optional.
-- The `AS` keyword is optional and is used to abbreviate long table names.
-- `t1.field` is only needed if the field name exists in both tables. Otherwise, `t1.` can be ommitted.
-- There are other types of joins but `INNER JOIN` is most common.
